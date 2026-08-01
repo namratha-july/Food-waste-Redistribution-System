@@ -1,4 +1,4 @@
- AI-Based  Food Waste Redistribution System
+ AI-Based  Food Waste Redistribution Platform
 
 [![Spring Boot 3.3](https://img.shields.io/badge/Spring_Boot-3.3-emerald)](https://spring.io/projects/spring-boot)
 [![React 19](https://img.shields.io/badge/React-19-cyan)](https://react.dev)
@@ -24,7 +24,7 @@ It is a full-stack, AI-powered platform designed to eliminate urban food waste b
 ## 📁 Project Folder Structure
 
 ```
-food-Waste-redistribution-System/
+food-Waste-redistribution-Platform/
 ├── backend/                             # Spring Boot 3.3 / Java 21 REST API Project
 │   ├── pom.xml                          # Maven build configuration & dependencies
 │   └── src/

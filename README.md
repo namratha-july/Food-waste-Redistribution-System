@@ -160,6 +160,3 @@ docker run -p 8080:8080 nourishnet-backend
 ```
 
 ---
-
-## 📄 License
-This project is open source and available under the [MIT License](LICENSE).

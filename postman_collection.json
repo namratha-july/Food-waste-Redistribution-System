@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "nourishnet-api-collection-2026",
+		"name": "NourishNet Food Redistribution REST API",
+		"description": "Postman Collection for NourishNet AI-Based Food Waste Redistribution System REST APIs (Spring Boot 3.3 / Java 21)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Green Leaf Hotel\",\n  \"email\": \"greenleaf@example.com\",\n  \"password\": \"Password123\",\n  \"phone\": \"+91 99887 76655\",\n  \"role\": \"DONOR\",\n  \"organizationName\": \"Green Leaf Banquet\",\n  \"city\": \"Bangalore\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/register",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "register"]
+						}
+					}
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"donor.hotel@nourishnet.org\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/login",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "login"]
+						}
+					}
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/auth/profile",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "auth", "profile"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Food Donations",
+			"item": [
+				{
+					"name": "Get All Donations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/donations",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "donations"]
+						}
+					}
+				},
+				{
+					"name": "Get Available Donations for NGOs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/donations/available",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "donations", "available"]
+						}
+					}
+				},
+				{
+					"name": "Post Surplus Food Donation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Surplus Dinner - Vegetable Pulao & Dal Tadka\",\n  \"category\": \"Cooked Meals\",\n  \"quantityKg\": 20.0,\n  \"servings\": 65,\n  \"freshnessScore\": 95,\n  \"storageCondition\": \"Refrigerated Container\",\n  \"pickupAddress\": \"Grand Palace Gate 3, Ring Road, Bangalore\",\n  \"donorName\": \"Grand Palace Hotel\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/donations",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "donations"]
+						}
+					}
+				},
+				{
+					"name": "Delete Donation Listing",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/donations/1",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "donations", "1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Food Requests & Claims",
+			"item": [
+				{
+					"name": "Claim Food Donation (NGO)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"donationId\": 1,\n  \"donationTitle\": \"Surplus Dinner - Vegetable Pulao & Dal Tadka\",\n  \"ngoName\": \"Feeding India Foundation\",\n  \"beneficiariesCount\": 65,\n  \"urgency\": \"HIGH\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/requests",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "requests"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Analytics & Impact Metrics",
+			"item": [
+				{
+					"name": "Get Impact Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/analytics/metrics",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "analytics", "metrics"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin Management",
+			"item": [
+				{
+					"name": "Get All Registered Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/admin/users",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "admin", "users"]
+						}
+					}
+				},
+				{
+					"name": "Verify User / NGO Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/admin/users/2/verify",
+							"host": ["{{baseUrl}}"],
+							"path": ["api", "v1", "admin", "users", "2", "verify"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

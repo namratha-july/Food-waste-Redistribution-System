@@ -1,0 +1,6 @@
+{
+  "name": "AI-Based Food Waste Redistribution System",
+  "description": "Full Stack project blueprint and structure for AI-Based Food Waste Redistribution System with Spring Boot 4.1.0 / Java 21 backend and React frontend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,4 +1,4 @@
-# NourishNet: AI-Based Surplus Food Waste Redistribution System
+ AI-Based Surplus Food Waste Redistribution System
 
 [![Spring Boot 3.3](https://img.shields.io/badge/Spring_Boot-3.3-emerald)](https://spring.io/projects/spring-boot)
 [![React 19](https://img.shields.io/badge/React-19-cyan)](https://react.dev)

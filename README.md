@@ -6,7 +6,7 @@
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4-blue)](https://tailwindcss.com)
 [![Google Gemini 2.5 AI](https://img.shields.io/badge/Gemini_AI-2.5-teal)](https://ai.google.dev)
 
-NourishNet is a full-stack, AI-powered platform designed to eliminate urban food waste by connecting hotels, restaurants, bakeries, and event caterers with verified local NGOs, food banks, and volunteer logistics fleets in real time.
+It is a full-stack, AI-powered platform designed to eliminate urban food waste by connecting hotels, restaurants, bakeries, and event caterers with verified local NGOs, food banks, and volunteer logistics fleets in real time.
 
 ---
 
@@ -24,7 +24,7 @@ NourishNet is a full-stack, AI-powered platform designed to eliminate urban food
 ## 📁 Project Folder Structure
 
 ```
-nourishnet-food-redistribution/
+food-Waste-redistribution-System/
 ├── backend/                             # Spring Boot 3.3 / Java 21 REST API Project
 │   ├── pom.xml                          # Maven build configuration & dependencies
 │   └── src/
